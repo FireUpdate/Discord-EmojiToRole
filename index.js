@@ -12,9 +12,7 @@ fetchMessages(bot, config)
 import track from "./src/track"
 track(bot, config)
 
-import token from "./token.json"
-
-bot.login(token)
+bot.login(process.env.TOKEN);
 	.then(() => {
 		console.log(`Logged in as ${bot.user.tag}`)
 	})
